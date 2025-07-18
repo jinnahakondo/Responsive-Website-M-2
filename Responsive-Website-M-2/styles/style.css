@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --clr-primary:#727272;
+    --clr-secondary:#131313;
+    --clr-orange:#FF900E;
+    -dark-2:#424242;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Work Sans", sans-serif;
+}
+/* Common Style  */
+.flex,
+.fetures{
+    display: flex;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 15px 28px;
+    background-color: var(--clr-orange);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: none;
+}
+
+.bar{
+    display: none;
+}
+main section{
+    margin-bottom: 130px;
+}
+/* common style end */
+/* header style  */
+header{
+    background-color: rgba(255, 144, 14, 0.1);
+    margin-bottom: 85px;
+}
+.navbar,
+.banner{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+}
+.logo{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--clr-primary);
+}
+/* banner style  */
+.banner-content{
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+.banner-title{
+    font-size: 4rem;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.banner-description{
+    font-size: 1rem;
+    color: var(--clr-primary);
+    margin-bottom: 30px;
+    line-height: 26px;
+}
+.banner img{
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* Fetures Section  */
+.fetures{
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin: 0 auto;
+}
+.f-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+.f-text-container{
+    max-width: 530px;
+    /* padding: 10px; */
+}
+.f-title{
+    font-size:2.9rem;
+    color: var(--clr-secondary);
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+.f-title .gray{
+    color: var(--clr-primary);
+    font-weight: 500;
+}
+.f-title .orange{
+    color: var(--clr-orange);
+}
+.f-description{
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: var(--clr-primary);
+    margin-bottom: 30px;
+}
+
+
+/* responsive style area  */
+@media screen and (max-width:576px){
+    /* header  */
+        header{
+        padding:0 30px;
+    }
+    .logo{
+    font-size: 1.8rem;
+    
+}
+.banner-title{
+    font-size: 2rem;
+   
+}
+    .bar{
+        display: block;
+        font-size: 25px;
+    }
+    
+    .nav-list{
+        display: none;
+    }
+
+
+      /* fetures section relted styles  */
+    .fetures{
+        flex-direction: column;
+    }
+    .f-text-container{
+        order: -1;
+        text-align: center;
+        padding:0 10px;
+    }
+    .f-img-container{
+    grid-template-columns: repeat(1,1fr);
+}
+
+
+}
+
+
+/* Medium device  */
+@media screen and (min-width:576px) and (max-width:992px){
+    /* header  */
+        header{
+        padding:0 30px;
+    }
+    .logo{
+    font-size: 2.3rem;
+    
+}
+.banner-title{
+    font-size: 3rem;
+   
+}
+    .bar{
+        display: block;
+        font-size: 35px;
+    }
+    
+    .nav-list{
+        display: none;
+    }
+
+    /* fetures section relted styles  */
+       .fetures{
+        flex-direction: column;
+    }
+        .f-img-container{
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    order: 1;
+}
+.f-img-container img{
+   width: 90%;
+    margin: 0 auto;
+}
+.f-text-container{
+    text-align: center;
+}
+
+}
+
+
+
+
+/* large device  */
+@media screen and (min-width:992px) and (max-width:1440px){
+            header{
+        padding:0 30px;
+    }
+
+    /* fetures section relted styles  */
+ .fetures{
+    max-width: 990px;
+ }
+ .f-img-container{
+    max-width: 600px;
+ }
+ .f-img-container img{
+    width: 100%;
+ }
+ .f-text-container{
+    max-width: 490px;
+}
+.f-title{
+    font-size: 2rem;
+}
+}
